@@ -1,0 +1,7 @@
+Algorithm Steps:
+- Step 1: Load map of all vehicles and gateways (nodes + edges).
+- Step 2: For each vehicle request, set start node = vehicle position, target node = gateway.
+- Step 3: Run pathfinding (A* recommended for speed).
+- Step 4: Store shortest path in control-room database.
+- Step 5: Send path instructions to vehicle module.
+- Step 6: Monitor path execution and re-run algorithm if obstacles appear.
