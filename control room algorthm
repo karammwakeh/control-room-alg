@@ -1,0 +1,18 @@
+Algorithm ControlRoom_Pathfinding
+Step 1: Load system map (nodes = vehicles + gateways, edges = connections).
+Step 2: For each vehicle request:
+    - Define start_node = vehicle_position
+    - Define target_node = gateway_position
+Step 3: Initialize priority_queue with start_node (cost = 0).
+Step 4: While priority_queue not empty:
+    - Extract node with lowest cost
+    - For each neighbor:
+        - Calculate new_cost = current_cost + edge_weight
+        - If new_cost < stored_cost:
+            - Update stored_cost
+            - Save predecessor
+            - Push neighbor into queue
+Step 5: Stop when target_node reached.
+Step 6: Reconstruct path using predecessors.
+Step 7: Send path to Gateway module.
+Step 8: Monitor execution; if obstacle detected → re-run algorithm.
